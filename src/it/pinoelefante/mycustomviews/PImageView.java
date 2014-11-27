@@ -2,23 +2,23 @@ package it.pinoelefante.mycustomviews;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.Button;
+import android.widget.ImageView;
 
-
-public class PButton extends Button {
+public class PImageView extends ImageView {
 	private String layoutName;
 	
-	public PButton(Context context) {
+	public PImageView(Context context) {
 		super(context);
 	}
+	
+	public PImageView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+	}
 
-	public PButton(Context context, AttributeSet attrs) {
+	public PImageView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 
-	public PButton(Context context, AttributeSet attrs, int defStyleAttr) {
-		super(context, attrs, defStyleAttr);
-	}
 	public void setSizePerc(int w, int h, String layoutName){
 		this.layoutName=layoutName;
 		int h_screen = getResources().getDisplayMetrics().heightPixels;

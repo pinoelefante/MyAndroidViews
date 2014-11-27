@@ -23,7 +23,15 @@ public class PLinearLayout extends LinearLayout {
 		if(getLayoutParams()==null){
 			setLayoutParams(new LayoutParams(w_p, h_p));
 		}
-		getLayoutParams().height=h_p;;
-		getLayoutParams().width=w_p;;
+		getLayoutParams().height=h_p;
+		getLayoutParams().width=w_p;
+		setMinimumHeight(h_p);
+	}
+	public void setSize(int w, int h){
+		if(getLayoutParams()==null){
+			setLayoutParams(new LayoutParams(w, h));
+		}
+		getLayoutParams().height=h;;
+		getLayoutParams().width=w;;
 	}
 }

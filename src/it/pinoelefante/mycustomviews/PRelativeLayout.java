@@ -29,4 +29,23 @@ public class PRelativeLayout extends RelativeLayout {
 		getLayoutParams().height=h_p;;
 		getLayoutParams().width=w_p;;
 	}
+	public void setSize(int w, int h){
+		if(getLayoutParams()==null){
+			setLayoutParams(new LayoutParams(w, h));
+		}
+		getLayoutParams().height=h;;
+		getLayoutParams().width=w;;
+	}
+	public void setWidth(int w){
+		if(getLayoutParams()==null){
+			setLayoutParams(new LayoutParams(w, LayoutParams.WRAP_CONTENT));
+		}
+		getLayoutParams().width=w;
+	}
+	public void setHeight(int h){
+		if(getLayoutParams()==null){
+			setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, h));
+		}
+		getLayoutParams().height=h;
+	}
 }
